@@ -7,7 +7,6 @@ const About = () => {
     const a = useContext(NoteContext); // Corrected the case here
     useEffect(() => {
       a.update();
-      // eslint-disable-next-line
     }, []);
     return (
         <div>
