@@ -5,17 +5,17 @@ import AddNote from './AddNote';
 
 const Notes = () => {
     const context = useContext(noteContext);
-  const {notes} = context;
+  const {notes,addNote} = context;
   return (
-    <>
-      <AddNote/>
+    <div>
+        <AddNote/>
       <div className="row my-3">
         <h1>Your Notes</h1>
         {notes.map((note)=>{
           return <NoteItem note = {note}/>
         })}
       </div>
-    </>
+    </div>
   )
 }
 

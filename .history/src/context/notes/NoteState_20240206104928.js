@@ -56,25 +56,22 @@ const NoteState = (props) => {
 
         // Add a Note
         const addNote = (title,description,tag)=>{
-            console.log("ading a new note")
            const note = {
                 "_id": "65c08b74fe6f489573f77cc43",
                 "user": "65bfaf9c39aefed5a2d5a414",
-                "title": title,
-                "description": description,
-                "tag": tag,
+                "title": "my reminder added ",
+                "description": "do your work added",
+                "tag": "reminder",
                 "date": "2024-02-05T07:17:08.223Z",
                 "__v": 0
             }
-            setNotes(notes.concat(note));
+            setNotes(notes.push(note));
 
         }
 
         //Delete a Note
-        const deleteNote = (id)=>{
-            console.log("deleting the not" + id)
-            const newNotes = notes.filter((note)=>{return note._id!==id})
-            setNotes(newNotes);
+        const deleteNote = ()=>{
+
         }
 
         // edit a note
